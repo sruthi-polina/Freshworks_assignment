@@ -7,7 +7,6 @@ d={} #dictionary to  store data
 
 #create operation 
 #use syntax "create(key_name,value,timeout_value)" timeout is optional 
-
 def create(key,value,timeout=0):
     if key in d:
         print("error: this key already exists") 
@@ -26,8 +25,7 @@ def create(key,value,timeout=0):
             print("error: Invalind key_name!! key_name must contain only alphabets and no special characters or numbers")
 
 #read operation
-#use syntax "read(key_name)"
-            
+#use syntax "read(key_name)"      
 def read(key):
     if key not in d:
         print("error: given key does not exist in database. Please enter a valid key") 
@@ -45,7 +43,6 @@ def read(key):
 
 # delete operation
 #syntax "delete(key_name)"
-
 def delete(key):
     if key not in d:
         print("error: given key does not exist in database. Please enter a valid key")
