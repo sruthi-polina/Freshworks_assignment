@@ -33,13 +33,13 @@ def read(key):
         b=d[key]
         if b[1]!=0:
             if time.time()<b[1]: #comparing the present time with expiry time
-                stri=str(key)+":"+str(b[0]) #to return the value in the format of JasonObject i.e.,"key_name:value"
-                return stri
+                s=str(key)+":"+str(b[0]) #to return the value in the format of JasonObject i.e.,"key_name:value"
+                return s
             else:
                 print("error: time-to-live of",key,"has expired") 
         else:
-            stri=str(key)+":"+str(b[0])
-            return stri
+            s=str(key)+":"+str(b[0])
+            return s
 
 # delete operation
 #syntax "delete(key_name)"
